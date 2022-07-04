@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="/app/app.js" type="module" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>CRUD App</h1>
+            <div class="container-url-input" id="containerURLInput">
+                <label for="urlInput">API URL:</label>
+                <input type="text" class="url__input" id="urlInput">
+
+                <div class="btn-group" id="btnGroupURL">
+                    <span class="material-icons-outlined icon__done" id="btnDone">done</span>
+                    <span class="material-icons-outlined icon__close" id="btnClose">close</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="wrapper">
+        <div class="wrapper-header">
+            <div class="empty"></div>
+            <button id="btnExamplePosts">example posts</button>
+            <h2 id="btnPosts">Posts</h2>
+            <div class="btn-group">
+                <p class="btn__show__all" id="btnShowAll">show list</p>
+                <p class="btn__new__post" id="btnNewPost">
+                    new
+                    <span class="material-icons-outlined">create</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="display" id="display">
+            <div class="display-new-post" id="displayNewPost">
+                <input type="text" id="authorInput" placeholder="Author">
+                <input type="text" id="newPostTitleInput" placeholder="Title">
+                <input type="text" id="newPostSubtitleInput" placeholder="Subtitle">
+                <textarea class="np__summary__input" id="newPostSummaryInput" placeholder="Summary ... (200 characters max)"></textarea>
+                <textarea class="np__text__input" id="newPostTextInput" placeholder="Write something interesting! ..."></textarea>
+
+                <div class="btn-group">
+                    <p class="btn btn__publish__post active" id="btnPublishPost">
+                        publish
+                        <span class="material-icons-outlined">save</span>
+                    </p>
+                    <p class="btn btn__update__post" id="btnUpdatePost">
+                        save
+                        <span class="material-icons-outlined">save</span>
+                    </p>
+                    <p class="btn btn__cancel active" id="btnCancel">
+                        cancel
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="display-cards" id="displayCards"></div>
+
+            <div class="display-list" id="displayList"></div>
+
+            <div class="display-full-post" id="displayFullPost"></div>
+        </div>
+    </section>
+
+    <div class="display-message" id="displayMessage">
+        <div class="message__card">
+            <p class="message" id="message"></p>
+            <div class="btn-group">
+                <button class="btn active" id="btnOkMessage">OK</button>
+                <button class="btn active" id="btnCancelMessage">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

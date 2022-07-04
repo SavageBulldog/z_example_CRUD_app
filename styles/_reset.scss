@@ -1,0 +1,19 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    user-select: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+li {
+    list-style-type: none;
+}

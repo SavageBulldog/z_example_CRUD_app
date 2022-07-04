@@ -1,0 +1,19 @@
+.display-cards {
+    visibility: hidden;
+    pointer-events: none;
+    
+    display: flex;
+    position: absolute;
+
+    &.active {
+        visibility: visible;
+        pointer-events: all;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        max-width: 80rem;
+    }
+}

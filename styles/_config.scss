@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+html {
+    overflow-y: scroll;
+    overflow-y: overlay;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+$clr-primary-100: rgb(238, 238, 238);
+$clr-primary-200: darken($clr-primary-100, 10%);
+// $clr-secondary-300: rgb(82, 64, 146);
+$clr-secondary-300: rgb(12, 160, 140);
+$clr-secondary-100: lighten($clr-secondary-300, 20%);
+$clr-accent-400: rgb(12, 160, 140);
+
+$clr-text-100: white;
+$clr-text-300: rgb(141, 141, 141);
+$clr-text-900: #333;
+
+@mixin transition-150 {
+    transition: all 150ms ease-in-out;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+}
+
+@mixin transition-200 {
+    transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+}
+
+.btn {
+    display: none;
+
+    &.active {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        padding: .3em .9em;
+        max-width: max-content;
+        background-color: $clr-accent-400;
+        color: white;
+        font-weight: 600;
+        font-size: .8rem;
+        text-transform: uppercase;
+
+        transition: background-color 150ms ease-in-out;
+
+        &:hover {
+            background-color: darken($clr-accent-400, 10%);
+        }
+
+        span {
+            font-size: 1.5rem;
+            margin-left: .7rem;
+        }
+    }
+}

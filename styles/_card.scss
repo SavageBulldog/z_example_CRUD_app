@@ -1,0 +1,72 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+
+    background-color: white;
+    height: 32rem;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        height: 55%;
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: $clr-text-300;
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 800;
+        font-family: 'Lora', serif;
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        line-height: 1.5;
+        font-size: .9rem;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: .8rem;
+    }
+
+    &__author__container {
+        display: flex;
+        flex-direction: column;
+
+        .author {
+            font-size: .8rem;
+            font-weight: 600;
+            letter-spacing: .5px;
+        }
+
+        .date__created {
+            font-size: .8rem;
+            color: lighten($clr-text-300, 10%);
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.card__img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45%;
+}
